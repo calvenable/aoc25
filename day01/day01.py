@@ -50,8 +50,9 @@ def partTwo(inputFilePath):
         if (change == 0):
           continue
 
+      initialPosition = dialPosition
       dialPosition += change
-      if (dialPosition < 0 or dialPosition > 100):
+      if ((dialPosition < 0 and initialPosition > 0) or dialPosition > 100):
         result += 1
 
       dialPosition %= 100
