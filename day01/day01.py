@@ -1,10 +1,5 @@
 # Advent of Code 2025 - day01
-import math
 import pyperclip
-
-def usefulFunction():
-  return True
-
 
 # Code for Part One ----------------------------------------------------
 def partOne(inputFilePath):

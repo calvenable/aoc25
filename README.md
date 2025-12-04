@@ -6,8 +6,8 @@ This year I will be attempting Advent of Code in **Python**. As always, I am opt
 Each day I run `.\day.ps1` which is a PowerShell script that sets up a folder for that day's work, and pulls my input file from the website. It uses the current day of the month, or an optional parameter for day number in case I miss a day! It copies a template Python file, and some empty text files for adding test input.
 
 ### Day summary
-- Day 1:
-- Day 2: 
+- Day 1: Counting the number of times a dial points at 0, or crosses the 0 mark, during a sequence of left and right operations.
+- Day 2: Checking if IDs are invalid (containing repeated sequences of digits).
 - Day 3: 
 - Day 4: 
 - Day 5: 
