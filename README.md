@@ -8,8 +8,8 @@ Each day I run `.\day.ps1` which is a PowerShell script that sets up a folder fo
 ### Day summary
 - Day 1: Counting the number of times a dial points at 0, or crosses the 0 mark, during a sequence of left and right operations.
 - Day 2: Checking if IDs are invalid (containing repeated sequences of digits).
-- Day 3: 
-- Day 4: 
+- Day 3: Selecting the batteries to switch on to provide maximum joltage to an escalator.
+- Day 4: Working out which rolls of paper are accessible to some forklifts.
 - Day 5: 
 - Day 6: 
 - Day 7:

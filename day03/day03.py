@@ -11,12 +11,11 @@ def largestDigit(digitString):
       largest = int(digitString[i])
   return largest
 
-def maxJoltage(digitString, numBatteries):
+def maxJoltage(digitString: str, numBatteries: int) -> str:
   '''Calculate the maximum joltage possible by turning on numBatteries in the provided digitString. Returns a string.'''
   if numBatteries == 0:
     return ""
   
-  digitString = digitString.strip()
   # Cut off (numBatteries-1) digits from the end
   firstBatteryJoltage = largestDigit(digitString[:len(digitString)-(numBatteries-1)])
   firstBatteryIndex = digitString.index(str(firstBatteryJoltage))
@@ -27,7 +26,7 @@ def partOne(inputFilePath):
   banks = []
   with open(inputFilePath, "r") as file:
     for line in file:
-      banks.append(line)
+      banks.append(line.strip())
 
   result = 0
   for bank in banks:
@@ -42,7 +41,7 @@ def partTwo(inputFilePath):
   banks = []
   with open(inputFilePath, "r") as file:
     for line in file:
-      banks.append(line)
+      banks.append(line.strip())
 
   result = 0
   for bank in banks:

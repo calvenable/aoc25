@@ -5,13 +5,19 @@ import pyperclip
 def usefulFunction():
   return True
 
+# Input file parsing code to be reused for both parts
+def readFileIntoObject(inputFilePath):
+  myObject = []
+  with open(inputFilePath, "r") as file:
+    for line in file:
+      myObject.append(line)
+
+  return myObject
+
 
 # Code for Part One ----------------------------------------------------
 def partOne(inputFilePath):
-
-  with open(inputFilePath, "r") as file:
-    for line in file:
-      print(line)
+  myObject = readFileIntoObject(inputFilePath)
 
   result = 0
 
@@ -21,6 +27,7 @@ def partOne(inputFilePath):
 
 # Code for Part Two ----------------------------------------------------
 def partTwo(inputFilePath):
+  myObject = readFileIntoObject(inputFilePath)
   return False
 
 
