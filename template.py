@@ -1,4 +1,5 @@
 # Advent of Code 2025 - [DAY]
+# Run this file with py .\[DAY]\[DAY].py
 import pyperclip
 
 def usefulFunction():
