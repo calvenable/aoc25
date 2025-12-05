@@ -12,7 +12,15 @@ def largestDigit(digitString):
   return largest
 
 def maxJoltage(digitString, numBatteries):
-  '''Calculate the maximum joltage possible by turning on numBatteries in the provided digitString.'''
+  '''Calculate the maximum joltage possible by turning on numBatteries in the provided digitString. Returns a string.'''
+  if numBatteries == 0:
+    return ""
+  
+  digitString = digitString.strip()
+  # Cut off (numBatteries-1) digits from the end
+  firstBatteryJoltage = largestDigit(digitString[:len(digitString)-(numBatteries-1)])
+  firstBatteryIndex = digitString.index(str(firstBatteryJoltage))
+  return str(firstBatteryJoltage) + maxJoltage(digitString[firstBatteryIndex + 1:], numBatteries - 1)
 
 # Code for Part One ----------------------------------------------------
 def partOne(inputFilePath):
@@ -23,28 +31,33 @@ def partOne(inputFilePath):
 
   result = 0
   for bank in banks:
-    # Find the largest digit that's not at the end
-    firstBatteryJoltage = largestDigit(bank[:len(bank)-2])
-    # Get its index
-    firstBatteryIndex = bank.index(str(firstBatteryJoltage))
-    # Get the largest digit after this battery
-    secondBatteryJoltage = largestDigit(bank[firstBatteryIndex+1:])
-    result += int(str(firstBatteryJoltage) + str(secondBatteryJoltage))
+    mJ = maxJoltage(bank, 2)
+    result += int(mJ)
 
   return result
 
 
 # Code for Part Two ----------------------------------------------------
 def partTwo(inputFilePath):
-  return False
+  banks = []
+  with open(inputFilePath, "r") as file:
+    for line in file:
+      banks.append(line)
+
+  result = 0
+  for bank in banks:
+    mJ = maxJoltage(bank, 12)
+    result += int(mJ)
+
+  return result
 
 
 # Run the code for the specified part ----------------------------------
 # answer = partOne("day03/test.txt")
-answer = partOne("day03/input.txt")
+# answer = partOne("day03/input.txt")
 
 # answer = partTwo("day03/test.txt")
-# answer = partTwo("day03/input.txt")
+answer = partTwo("day03/input.txt")
 
 pyperclip.copy(answer)
 print(answer)
