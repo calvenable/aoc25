@@ -1,6 +1,5 @@
 from collections.abc import Hashable
 from typing import TypeVar
-Point = tuple[int,int,int]
 T = TypeVar('T', bound=Hashable)
 
 class UnionFind[T]:
