@@ -10,10 +10,10 @@ Each day I run `.\day.ps1` which is a PowerShell script that sets up a folder fo
 - Day 2: Checking if IDs are invalid (containing repeated sequences of digits).
 - Day 3: Selecting the batteries to switch on to provide maximum joltage to an escalator.
 - Day 4: Working out which rolls of paper are accessible to some forklifts.
-- Day 5: 
-- Day 6: 
-- Day 7:
-- Day 8:
+- Day 5: Decide which ingredient IDs are fresh based on ranges of IDs.
+- Day 6: Helping cephalopods with maths homework, reading numbers in rows or columns.
+- Day 7: Counting how many times a tachyon beam splits in two.
+- Day 8: Connecting junction boxes with strings of lights.
 - Day 9: 
 - Day 10: 
 - Day 11: 
